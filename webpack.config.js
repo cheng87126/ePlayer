@@ -18,8 +18,15 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-					'css-loader',
+					'css-loader?modules',
 					'sass-loader'
+				]
+			},{
+				test: /\.(png|jpg|gif|svg)$/,
+				use: [{
+						loader: 'file-loader',
+						options: {}
+					}
 				]
 			}
 		]
@@ -31,5 +38,6 @@ module.exports = {
 			filename: devMode ? '[name].css' : '[name].[hash].css',
 			chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
 		})
-	]
+	],
+	watch:true
 }
