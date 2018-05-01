@@ -4,6 +4,10 @@
 
 ###用到的技术
 
-Electron + React + Sass
+Electron + React + MobX + Sass
 
-待续...
+###使用
+
+	npm install
+	npm run dev
+	npm run start

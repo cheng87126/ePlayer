@@ -28,7 +28,7 @@ class OpenFile extends React.Component{
 	render(){
 		return (
 			<label htmlFor="open" className={sty.open}>
-				<img src={'dist/'+open} alt="open"/>
+				<img src={open} alt="open"/>
 				<input ref={this.fileRef} type="file" name="open" id="open" onChange={this.handleFiles}/>
 			</label>
 		)
